@@ -1,18 +1,25 @@
 ﻿<Window x:Class="WpfTutorialSamples.Misc_controls.TabControlWithCustomHeadersSample"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="TabControlWithCustomHeadersSample" Height="200" Width="250">
+        Title="TabControlWPF" Height="250" Width="450"
+        WindowStartupLocation="CenterScreen">
+
     <Grid>
-        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
             <TabControl>
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal">
-                            
                             <TextBlock Text="Blue" Foreground="Blue" />
                         </StackPanel>
                     </TabItem.Header>
-                    <Label Content="Content goes here..." />
+                    <Grid Height="22" HorizontalAlignment="Left" Width="94">
+                        <TextBox Text="Textfeld in Tab1" />
+                    </Grid>
                 </TabItem>
                 <TabItem>
                     <TabItem.Header>
@@ -20,6 +27,9 @@
                             <TextBlock Text="Red" Foreground="Red" />
                         </StackPanel>
                     </TabItem.Header>
+                    <Grid  Height="22" HorizontalAlignment="Left" Width="94">
+                        <TextBox Text="Textfeld in Tab2" HorizontalAlignment="Left" Width="94" />
+                    </Grid>
                 </TabItem>
                 <TabItem>
                     <TabItem.Header>
@@ -27,6 +37,9 @@
                             <TextBlock Text="Green" Foreground="Green" />
                         </StackPanel>
                     </TabItem.Header>
+                    <Grid  Height="22" HorizontalAlignment="Left" Width="94">
+                        <TextBox Text="Textfeld in Tab3" HorizontalAlignment="Left" Width="94" />
+                    </Grid>
                 </TabItem>
             </TabControl>
         </Grid>

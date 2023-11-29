@@ -24,5 +24,10 @@ namespace TabControlWPF
         {
             InitializeComponent();
         }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
